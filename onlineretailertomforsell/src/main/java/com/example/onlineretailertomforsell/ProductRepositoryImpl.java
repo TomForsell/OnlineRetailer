@@ -7,6 +7,8 @@ import java.util.List;
 
 @Repository
 public class ProductRepositoryImpl implements ProductRepository{
+    
+    // FROM ANDY: Alternatively you could use a HashMap to facilitate easy lookup-by-id.
     List<Product> productList =new ArrayList<Product>();
 
     @Override
@@ -14,6 +16,7 @@ public class ProductRepositoryImpl implements ProductRepository{
         productList.add(newProduct);
     }
 
+    // FROM ANDY: Could just take an id.
     @Override
     public boolean deleteProduct(Product delProduct) {
         if(productList.contains(delProduct)){
